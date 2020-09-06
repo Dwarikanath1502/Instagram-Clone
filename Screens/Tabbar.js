@@ -19,7 +19,11 @@ export default class Tabbar extends Component {
           
         </TouchableOpacity>
         <TouchableOpacity style={styles.container}>
-          <Icon name="movie" size={35} />
+          <Icon name="movie" size={35} 
+          onPress = {
+            ()=> this.props.navigation.navigate('Movie')
+          }  
+        />
           
         </TouchableOpacity>
         <TouchableOpacity style={styles.container}>

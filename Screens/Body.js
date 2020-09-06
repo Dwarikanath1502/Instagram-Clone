@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, Image} from 'react-native'
+import { Text, StyleSheet, View, Image, ScrollView} from 'react-native'
 import { Container, Header, Content, Card, CardItem, Thumbnail,  Button, Icon, Left, Body, Right } from 'native-base';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+//importing screens
+import Tabbar from './screens/Tabbar'
+import Navbar from './Screns/Navbar'
 
 export default class BodyScreen extends Component {
     render() {
@@ -73,10 +77,43 @@ export default class BodyScreen extends Component {
             </CardItem>
           </Card>
         </Content>          
-      /*  TODO: Add suggestions Here  */
-        <View style = {{height:150}}>
-        <Text>Add suggestions</Text>
-        </View>
+      {/* TODO: Add Suggestons */}
+          <View style = {styles.suggestionView}>
+            <Text style = {{marginTop:5 ,marginLeft: 8, fontWeight: "bold", color:'#4834DF' }}>Suggestions</Text>
+             	{/* FIXME: ScrollView not workview replace View */}
+               <View style = {styles.suggestionViewInner}>
+                  <TouchableOpacity style = {styles.suggestionTch}>
+                    <Image  
+                      source = {require('../Images/suggest1.jpg')}
+                      style = {styles.icon}
+                      
+                    />
+                    <Text style = {styles.suggestionName}>Alis</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style = {styles.suggestionTch}>
+                    <Image  
+                      source = {require('../Images/suggest2.jpg')}
+                      style = {styles.icon}
+                    />
+                    <Text style = {styles.suggestionName}>Oliver</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style = {styles.suggestionTch}>
+                    <Image  
+                      source = {require('../Images/suggest3.jpg')}
+                      style = {styles.icon}
+                    />
+                    <Text style = {styles.suggestionName}>Amelia</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style = {styles.suggestionTch}>
+                    <Image  
+                      source = {require('../Images/suggest4.jpg')}
+                      style = {styles.icon}
+                    />
+                  </TouchableOpacity>
+              </View>
+
+          </View>
+
           <Content>
           <Card>
             <CardItem>
@@ -86,7 +123,7 @@ export default class BodyScreen extends Component {
                   <Text>hey.dn1502</Text>
                   <Text note>Student</Text>
                 </Body>
-              </Left>
+              </Left> 
             </CardItem>
             <CardItem cardBody>
               <Image source={require('../Images/tatto1.jpg')} style={{height: 350, width: null, flex: 1}}/>
@@ -689,345 +726,9 @@ export default class BodyScreen extends Component {
           </Card>
         </Content>
 
-        <Content>
-          <Card>
-            <CardItem>
-              <Left>
-                <Thumbnail souce={require('../Images/img1.jpg')} />
-                <Body>
-                  <Text>hey.dn1502</Text>
-                  <Text note>Student</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody>
-              <Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="heart" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
-          </Card>
-        </Content>
+     
 
-        <Content>
-          <Card>
-            <CardItem>
-              <Left>
-                <Thumbnail souce={require('../Images/img1.jpg')} />
-                <Body>
-                  <Text>hey.dn1502</Text>
-                  <Text note>Student</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody>
-              <Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="heart" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
-          </Card>
-        </Content>
-
-        <Content>
-          <Card>
-            <CardItem>
-              <Left>
-                <Thumbnail souce={require('../Images/img1.jpg')} />
-                <Body>
-                  <Text>hey.dn1502</Text>
-                  <Text note>Student</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody>
-              <Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="heart" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
-          </Card>
-        </Content>
-
-        <Content>
-          <Card>
-            <CardItem>
-              <Left>
-                <Thumbnail souce={require('../Images/img1.jpg')} />
-                <Body>
-                  <Text>hey.dn1502</Text>
-                  <Text note>Student</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody>
-              <Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="heart" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
-          </Card>
-        </Content>
-
-        <Content>
-          <Card>
-            <CardItem>
-              <Left>
-                <Thumbnail souce={require('../Images/img1.jpg')} />
-                <Body>
-                  <Text>hey.dn1502</Text>
-                  <Text note>Student</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody>
-              <Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="heart" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
-          </Card>
-        </Content>
-
-        <Content>
-          <Card>
-            <CardItem>
-              <Left>
-                <Thumbnail souce={require('../Images/img1.jpg')} />
-                <Body>
-                  <Text>hey.dn1502</Text>
-                  <Text note>Student</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody>
-              <Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="heart" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
-          </Card>
-        </Content>
-
-        <Content>
-          <Card>
-            <CardItem>
-              <Left>
-                <Thumbnail souce={require('../Images/img1.jpg')} />
-                <Body>
-                  <Text>hey.dn1502</Text>
-                  <Text note>Student</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody>
-              <Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="heart" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
-          </Card>
-        </Content>
-
-        <Content>
-          <Card>
-            <CardItem>
-              <Left>
-                <Thumbnail souce={require('../Images/img1.jpg')} />
-                <Body>
-                  <Text>hey.dn1502</Text>
-                  <Text note>Student</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody>
-              <Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="heart" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
-          </Card>
-        </Content>
-
-        <Content>
-          <Card>
-            <CardItem>
-              <Left>
-                <Thumbnail souce={require('../Images/img1.jpg')} />
-                <Body>
-                  <Text>hey.dn1502</Text>
-                  <Text note>Student</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody>
-              <Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="heart" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
-          </Card>
-        </Content>
-
-        <Content>
-          <Card>
-            <CardItem>
-              <Left>
-                <Thumbnail souce={require('../Images/img1.jpg')} />
-                <Body>
-                  <Text>hey.dn1502</Text>
-                  <Text note>Student</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem cardBody>
-              <Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent>
-                  <Icon active name="heart" />
-                  <Text>12 Likes</Text>
-                </Button>
-              </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
-            </CardItem>
-          </Card> 
-        </Content>
+    
             </View>
         ) 
     }
@@ -1036,5 +737,30 @@ export default class BodyScreen extends Component {
 const styles = StyleSheet.create({
     container:{
         flex:1
+    },
+    suggestionView:{
+      height:230,
+
+    },
+    suggestionViewInner:{
+     flexDirection:'row',
+     marginTop: 5
+    },
+    icon:{
+      borderColor: '#000',
+      borderWidth: 2,
+      height:150,
+      width:160,
+      padding:12,
+      marginTop:10,
+      marginLeft:7,
+      borderRadius:15
+    },
+    suggestionTch:{
+      alignItems: 'center'
+    },
+    suggestionName:{
+      fontWeight: 'bold',
+    fontSize:15
     }
 })

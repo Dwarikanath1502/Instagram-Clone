@@ -10,6 +10,7 @@ import NotificationScreen from './Screens/NotificationScreen';
 import AccountScrren from './Screens/AccountScrren';
 import MessageScrren from './Screens/MessageScrren';
 import SearchScreen from './Screens/SearchScreen';
+import MovieScreen from './Screens/MovieScreen';
 
 const Stack = createStackNavigator();
 
@@ -50,6 +51,10 @@ function App () {
       <Stack.Screen 
         name = 'Search'
         component = {SearchScreen}
+      />
+       <Stack.Screen 
+        name = 'Movie'
+        component = {MovieScreen}
       />
     </Stack.Navigator>
   </NavigationContainer>

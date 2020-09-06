@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, StatusBar , ScrollView} from 'react-native'
+import {  StyleSheet, View, StatusBar , ScrollView} from 'react-native'
 import Navbar from './Screens/Navbar'
 import Tabbar from './Screens/Tabbar'
-
+//Screens
 import Story from './Screens/Story'
-import Body from './Screens/Body'
 import BodyScreen from './Screens/Body'
 export default class App extends Component {
   render() {
