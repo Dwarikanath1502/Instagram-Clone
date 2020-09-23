@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View } from 'react-native'
+import { Text, View } from 'react-native'
 
-export default class MovieScreen extends Component {
+export default class AccountScreen extends Component {
     render() {
         return (
             <View>
@@ -10,5 +10,3 @@ export default class MovieScreen extends Component {
         )
     }
 }
-
-const styles = StyleSheet.create({})

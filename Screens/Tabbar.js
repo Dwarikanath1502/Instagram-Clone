@@ -1,5 +1,3 @@
-/* @flow */
-
 import React, { Component } from 'react';
 import {
   View,
@@ -11,22 +9,34 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 
 export default class Tabbar extends Component {
+  
+
+
   render() {
     return (
       <View style={styles.tabbar}>
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container}
+        onPress = {
+          ()=> this.props.navigation.navigate("Body")
+        }
+        >
           <Icon name="home" size={35} />
           
         </TouchableOpacity>
         <TouchableOpacity style={styles.container}>
           <Icon name="movie" size={35} 
           onPress = {
-            ()=> this.props.navigation.navigate('Movie')
+            ()=>{this.props.navigation.navigate('Reels')}
           }  
         />
-          
+           
         </TouchableOpacity>
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity 
+        style={styles.container}
+        onPress = {
+          ()=>{this.props.navigation.navigate('Add')}
+        }
+        >
           <Icon name="add" size={55} />
           
         </TouchableOpacity>
@@ -34,7 +44,11 @@ export default class Tabbar extends Component {
           <Icon name='favorite' size={35} />
          
         </TouchableOpacity>
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity 
+        onPress = {
+          ()=> this.props.navigation.navigate('Account')
+        }
+        style={styles.container}>
           <Icon name="person" size={35} />
          
         </TouchableOpacity>
@@ -45,6 +59,7 @@ export default class Tabbar extends Component {
 
 const styles = StyleSheet.create({
   tabbar: {
+    
     backgroundColor: '#fff',
     height: 60,
     borderTopWidth: 2,

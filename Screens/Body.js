@@ -3,15 +3,19 @@ import { Text, StyleSheet, View, Image, ScrollView} from 'react-native'
 import { Container, Header, Content, Card, CardItem, Thumbnail,  Button, Icon, Left, Body, Right } from 'native-base';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 //importing screens
-import Tabbar from './screens/Tabbar'
-import Navbar from './Screns/Navbar'
+import Tabbar from './Tabbar'
+import Story from './Story'
+import Navbar from './Navbar'
 
 export default class BodyScreen extends Component {
     render() {
         return (
-            <View style = {styles.container}>
+          <View style = {styles.container}>
+              <Navbar  />
+            <ScrollView>
+              <Story/>
               <Content>
-          <Card>
+          <Card> 
             <CardItem>
               <Left>
                 <Thumbnail souce={require('../Images/cute1.jpg')} /> 
@@ -725,16 +729,17 @@ export default class BodyScreen extends Component {
             </CardItem>
           </Card>
         </Content>
-
+       </ScrollView>
+       
+            <Tabbar  />
      
-
-    
-            </View>
+      </View>
         ) 
     }
 }
 
 const styles = StyleSheet.create({
+  
     container:{
         flex:1
     },
