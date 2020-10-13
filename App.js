@@ -42,7 +42,7 @@ function App() {
           component = {CameraScreen}
         />
         <Stack.Screen 
-          name = 'Chats'
+          name = 'Chat'
           component = {ChatScreen}
         />
          <Stack.Screen 

@@ -8,7 +8,9 @@ export default class Navbar extends Component {
         return (
             <View>
                <View style = {styles.navbar}>
-               <TouchableOpacity>
+               <TouchableOpacity
+                onPress={this.props.onPressCamera}
+               >
           <Entypo 
             name = 'camera'
             size = {27}
@@ -20,14 +22,18 @@ export default class Navbar extends Component {
           source = {require('../Images/logo.png')}
         />
         <View style = {styles.moveright}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={this.props.onPressSearch}
+        >
           <Icon 
             name = 'search'
             size = {27}
             style = {styles.icons}
           />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={this.props.onPressChat}
+          >
           <Entypo 
             name = 'paper-plane'
             size = {27}

@@ -11,7 +11,17 @@ export default class BodyScreen extends Component {
     render() {
         return (
           <View style = {styles.container}>
-              <Navbar  />
+              <Navbar 
+                onPressCamera = {
+                  ()=>{this.props.navigation.navigate('Camera')}
+                }
+                onPressSearch={
+                  ()=>{this.props.navigation.navigate('Search')}
+                }
+                onPressChat = {
+                  ()=>{this.props.navigation.navigate('Chat')}
+                }
+              />
             <ScrollView>
               <Story/>
               <Content>
