@@ -16,38 +16,34 @@ export default class Tabbar extends Component {
     return (
       <View style={styles.tabbar}>
         <TouchableOpacity style={styles.container}
-        onPress = {
-          ()=> this.props.navigation.navigate("Body")
-        }
+        onPress = {this.props.onPressHome}
         >
           <Icon name="home" size={35} />
           
         </TouchableOpacity>
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container}
+          onPress={this.props.onPressMovie}
+        >
           <Icon name="movie" size={35} 
-          onPress = {
-            ()=>{this.props.navigation.navigate('Reels')}
-          }  
+          onPress = {this.props.onPressReels}  
         />
            
         </TouchableOpacity>
         <TouchableOpacity 
         style={styles.container}
-        onPress = {
-          ()=>{this.props.navigation.navigate('Add')}
-        }
+        onPress = {this.props.onPressAdd}
         >
           <Icon name="add" size={55} />
           
         </TouchableOpacity>
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container}
+          onPress={this.props.onPressFavourite}
+        >
           <Icon name='favorite' size={35} />
          
         </TouchableOpacity>
         <TouchableOpacity 
-        onPress = {
-          ()=> this.props.navigation.navigate('Account')
-        }
+        onPress = {this.props.onPressAccount}
         style={styles.container}>
           <Icon name="person" size={35} />
          

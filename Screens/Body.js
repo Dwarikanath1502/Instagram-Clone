@@ -741,7 +741,20 @@ export default class BodyScreen extends Component {
         </Content>
        </ScrollView>
        
-            <Tabbar  />
+            <Tabbar
+              onPressReels = {
+                ()=>{this.props.navigation.navigate('Reels')}
+              }
+              onPressAdd = {
+                ()=>{this.props.navigation.navigate('Add')}
+              }
+              onPressFavourite= {
+                ()=>{this.props.navigation.navigate('Notifications')}
+              }
+              onPressAccount = {
+                ()=>{this.props.navigation.navigate('Account')}
+              }
+            />
      
       </View>
         ) 
